@@ -2,7 +2,7 @@ const mongodb = require('mongodb')
 
 const getDb = require('../util/database').getDb;
 class Product {
-  constructor(title, price, description, imageUrl, id,userid) {
+  constructor(title, price, description, imageUrl,id,userid) {
     this.title = title;
     this.price = price;
     this.description = description;
@@ -32,6 +32,7 @@ class Product {
       })
       .catch(err => console.log(err));
   }
+
 
   static findbyId(prodId) {
     const db = getDb();
